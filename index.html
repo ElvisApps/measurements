@@ -173,7 +173,8 @@
   <script>
     function convertUnits(){
 
-      const value = parseFloat(document.getElementById("value").value);
+      const input = document.getElementById("value").value.replace(",", ".");
+      const value = parseFloat(input);
       const from = document.getElementById("fromUnit").value;
       const to = document.getElementById("toUnit").value;
       const resultBox = document.getElementById("result");
